@@ -1,0 +1,20 @@
+BoxLayout:
+    orientation: 'vertical'
+    BoxLayout:
+        orientation: 'horizontal'
+        size_hint: 1, .1
+        Label:
+            text: 'Enter Size'
+        TextInput:
+            id: input_size
+            text: ''
+            font_size: 36
+            multiline: False
+        Button:
+            text: 'Generate Matrix'
+            on_press: app.generate_grid()
+        Label:
+            id: output_label
+            font_size: 12
+    GridLayout:
+        id: matrix
